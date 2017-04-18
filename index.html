@@ -1,29 +1,54 @@
 ---
 layout: default
-title: "Ed."
+title: "Allograph"
 ---
 <div class="introduction">
-  <h1>Hi.</h1>
+<h2>Why GraphQL</h2>
+<p>
+The past five years have witnessed a momentous shift in how web and mobile applications are designed. Traditional REST APIs are becoming increasingly cumbersome because they are required to support multiple devices with different screen sizes and potential network latency issues. Over fetching and under fetching data are being identified as problematic as optimal user experience is increasingly coming to depend on speed of requests, rather than page render times.</p>
 
-<p>Ed is a <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> theme designed for textual editors based on <a href="http://go-dh.github.io/mincomp/">minimal computing principles</a>, and focused on legibility, durability, ease and flexibility. Our underlying technology is easy to learn and teach, and can produce beautifully rendered scholarly or reading editions of texts meant to last. To start using Ed, please see <a href="{{ site.baseurl }}/documentation/">our documentation</a> for installation instructions and more. To learn more about the ideas behind Ed and a list of current features see our <a href="{{ site.baseurl }}/about/">about</a> section. To see Ed in action, we've provided some sample minimal editions for you below.</p>
+<h2>What is GraphQL</h2>
+<p>The solution to this mismatch between what the server provides through REST endpoints and what the client actually needs is GraphQL. GraphQL is an API query language in which the client makes a request and the structure of the server's response matches the structure of the request. The server defines its capabilities, and the client can request any subset of those capabilities. The result is a flexible system where the data requirements of the client are met with a single response. </p>
+
+<p>GraphQL has the potential to transform how we think about APIs, but the ecosystem is young and examples can be difficult to find. What is needed is a framework that provides structure and reduces the need to write repetitive code, but still allows the developer to have control over their code and the flexibility to extend their GraphQL schema with custom logic.</p> 
+
+<h2>Allograph</h2>
+<p>Allograph is a framework for rapidly developing GraphQL servers. Co-created by Ting Chou and Rachel Minto, Allograph provides a flexible and convenient way to create a GraphQL server for your existing or new application, and it was designed to solve the most common problems encountered when creating a GraphQL server.</p>
+
+<h2>1. Empty Paper Problem</h2>
+
+<p>You've decided to create a GraphQL server. Now what? How will you structure your application? With Allograph you know exactly what code you need to write and where your code should go. We've given you an organized file structure with most of the code already written. All you need to provide is your postgres database credentials and you'll have a server up and running in minutes. From there, you can choose to add custom business logic and extend your server to meet your application requirements.</p>
+
+<img src="/assets/workflow.png">
+
+<h2>2. Repetitive Code</h2>
+
+<p>Let's face it: GraphQL code can be repetitive. For each of your database tables you'll want to write queries, mutations, types, and models. And a lot of that code will be CRUD. So you can copy and paste and make the slight changes here and there, miss a few changes, debug, and repeat. A simple table with a few columns will be about 140 lines of code and you have to write that code for pretty much every table. Or you can use Allograph to create all of your default mutations, queries, types and models for you. Keep your weekend, you earned it.</p>
+
+<h2>3. Time Spent Looking for Tools</h2>
+
+<p>Developers are excited about GraphQL for good reason, which means that new tools are popping up every day. Some of these tools have been tested and approved, but others have limited documentation and few examples. With Allograph, we've taken the responsibility of curating and provided integration with the tools that will make coding pleasurable. Whether it's for data caching and batching, authentication and authorization, or running migrations, we've got you covered.</p>
+
+<h2>4. Lack of Examples</h2>
+
+<p>GraphQL is a language specification, not a storage engine, so it can be implemented in any language. While www.graphql.org provides good documentation, the examples are written in the GraphQL language, not in the language that you'll be coding in, so the syntax is quite different. We wrote Allograph in JavaScript, and we generate files that you can inspect to see how we write the default queries, mutations, types and models. Those files are a great resource when it comes time to write custom logic.</p>
+
+<h2>5. Loosing your REST API</h2>
+
+<p>You've spent years creating your REST API and we don't want to see that development time go to waste so Allograph allows for incremental adoption. Provide your REST API as a swagger json file, and Allograph will create default queries for each REST endpoint that are integrated into the GraphQL schema generated from your database. Then as time permits you can identify which REST requests are most expensive and move those over into being fully GraphQL.</p>
+
+<img src="/assets/swagger.png">
+
+<h2>Getting started</h2>
+
+<p>You can clone Allograph from its Github page.</p>
+<p><iframe src="https://drive.google.com/file/d/0B4pWqbzRu2kqS3JMWDE1b2QtZjg/preview" width="640" height="480"></iframe></p>
+
+<p>With a convenient command line interface and the ability to have a server up and running in less than five minutes with all of your defaults automatically generated from your postgres database, Allograph allows you to focus on the custom business logic that makes your application unique. We look forward to hearing your feedback!
+</p>
+<p>
+Ting Chou and Rachel Minto
+</p>
 </div>
-
-<hr>
-
-<div class="toc">
-  <h2>Sample texts</h2>
-  <ul class="post">
-  {% for item in site.texts do %}
-  
-    <li class="post-title">
-      <a href="{{ site.baseurl }}{{ item.url }}">
-        {{ item.title }}
-      </a>
-    </li>
-  {% endfor %}
-  </ul>  
-
-</div>
-
 
 
