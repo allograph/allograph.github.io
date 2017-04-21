@@ -1,1 +1,2 @@
-# Allograph: A framework for rapidly developing production-level servers.
+# Allograph
+## A framework for rapidly developing production-level servers.
