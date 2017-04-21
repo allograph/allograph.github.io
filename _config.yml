@@ -2,8 +2,8 @@
 
 # Setup
 title:               Allograph
-tagline:             'A dev tool to quickly mock up a GraphQL server from an existing database.'
-description:         'A dev tool to quickly mock up a GraphQL server from an existing database.'
+tagline:             'A dev tool to rapidly develop a GraphQL server from an existing database.'
+description:         'A dev tool to rapidly develop a GraphQL server from an existing database.'
 url:                 'http://allograph.github.io'
 baseurl:             ''
 
